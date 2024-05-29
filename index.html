@@ -20,12 +20,353 @@
           <meta name="theme-color" content="#17151A">
     
     <title>UltimateITA</title>
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/all.css" rel="stylesheet">
+
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="css/all.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-	
+
+<style type="text/css">#main-app .crate-prompt[data-v-9f54902a] {
+  padding: 5rem;
+}
+@media (max-width: 500px) {
+#main-app .button[data-v-9f54902a] {
+    width: 100%;
+}
+}
+</style>
+<style type="text/css">.night .main-app[data-v-7590abdc] {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  overflow: hidden;
+  background-color: #17242D;
+}
+.main-route-container[data-v-7590abdc] {
+  flex: 1;
+  max-width: 100%;
+}
+</style>
+
+<style type="text/css">.live-stream-twitch {
+  height: 100%;
+}
+</style>
+<style type="text/css">.live-stream__root[data-v-fb7c3f86] {
+  padding: 0 !important;
+  background-color: transparent !important;
+  border-radius: inherit;
+}
+.live-stream__video[data-v-fb7c3f86] {
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+.loader-wrapper {
+	position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+	z-index: 99999;
+	text-align: center;
+	background-color: #FFF;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+    background-image: url(../images/dot-grid.png);
+}
+.loading-text h1 {
+	background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+	background-size: cover;
+	color: transparent;
+	-moz-background-clip: text;
+	-webkit-background-clip: text;
+	font-size: 120px;
+}
+.live-stream__float[data-v-fb7c3f86] {
+  position: fixed;
+  z-index: 101;
+  right: 16px;
+  bottom: 8px;
+  height: 170px;
+  width: 300px;
+  opacity: 1;
+}
+.site-canvas--mobile .live-stream__float[data-v-fb7c3f86] {
+  position: unset !important;
+  height: 100% !important;
+  width: 100% !important;
+}
+.main-app--with-chat-sidebar .live-stream__video.live-stream__float[data-v-fb7c3f86] {
+  right: 316px;
+}
+.live-stream__video-container[data-v-fb7c3f86] {
+  height: 90%;
+  overflow: hidden;
+}
+.live-stream__video-container--full[data-v-fb7c3f86] {
+  height: 100% !important;
+}
+</style>
+<style type="text/css">.t-panel {
+  height: auto;
+  max-width: 100%;
+}
+.t-panel .t-panel__image {
+  max-width: 100%;
+  height: auto;
+}
+.t-panel h1,
+.t-panel h2,
+.t-panel h3,
+.t-panel h4,
+.t-panel h5 {
+  max-width: 100%;
+  height: auto;
+}
+
+.t-panel .t-panel__title {
+  max-width: 100%;
+  height: auto;
+}
+</style>
+<style type="text/css">.site-control-element[data-v-635cf3b7] {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto 8px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  transition: all 275ms;
+  opacity: 0;
+  z-index: 5;
+  max-width: 100%;
+  height: auto;
+}
+</style>
+<style type="text/css">.site-component[data-v-0cca636e] {
+  position: relative;
+  flex: 1;
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+
+}
+.site-component--editing:hover .site-component-controls[data-v-0cca636e] {
+  opacity: 1;
+}
+.site-component-controls[data-v-0cca636e] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 8px;
+  transition: all 275ms;
+  z-index: 6;
+  opacity: 0;
+}
+.component-container[data-v-0cca636e] {
+  transition: all 1s ease-in-out;
+}
+.component-container.highlight[data-v-0cca636e] {
+  box-shadow: 0 0 5px #80F5D2;
+  transform: scale(1.05);
+}
+</style>
+
+<style type="text/css">.navbar-site-logo[data-v-0c5c97a3] {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.navbar-site-logo--editing:hover .logo-edit-icon[data-v-0c5c97a3] {
+  z-index: 1;
+  opacity: 1;
+}
+.navbar__user-letter-logo[data-v-0c5c97a3] {
+  text-align: center;
+  font-size: 30px;
+  background: var(--button-color);
+  color: var(--button-text-color);
+  padding-top: 6px;
+}
+.navbar__logo[data-v-0c5c97a3],
+.navbar__user-letter-logo[data-v-0c5c97a3] {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 275ms;
+  border: 3px solid transparent;
+}
+.navbar__logo[data-v-0c5c97a3]:hover,
+.navbar__user-letter-logo[data-v-0c5c97a3]:hover {
+  border-color: var(--button-color);
+}
+.navbar__logo--large[data-v-0c5c97a3],
+.navbar__user-letter-logo--large[data-v-0c5c97a3] {
+  width: 75px;
+  height: 75px;
+}
+.navbar__logo--x-large[data-v-0c5c97a3],
+.navbar__user-letter-logo--x-large[data-v-0c5c97a3] {
+  width: 100px;
+  height: 100px;
+}
+.logo-edit-icon[data-v-0c5c97a3] {
+  position: absolute;
+  left: 30px;
+  top: 0px;
+  z-index: -1;
+  min-width: 87px;
+  margin-right: 8px;
+  margin-left: 8px;
+}
+</style>
+<style type="text/css">.twitch-partnered-icon[data-v-14a3aa3e] {
+  font-size: 18px;
+  margin-left: 8px;
+}
+</style>
+<style type="text/css">.navbar__title[data-v-ba730246] {
+  font-size: 25px;
+  line-height: 18px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 275ms;
+}
+.navbar-site-title[data-v-ba730246] {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+}
+.navbar-site-title--can-edit:hover .site-control-element__site-title[data-v-ba730246] {
+  z-index: 1;
+  opacity: 1;
+}
+.custom-title-input[data-v-ba730246] {
+  margin-right: 8px;
+}
+.site-control-element__site-title[data-v-ba730246] {
+  position: absolute;
+  left: 88%;
+  top: 0;
+  z-index: -1;
+  min-width: 112px;
+  margin-right: 8px;
+  margin-left: 8px;
+}
+</style>
+
+<style type="text/css">.navbar-socials--margin-left[data-v-2839db71] {
+  margin-left: 16px;
+}
+.navbar-socials__icon[data-v-2839db71] {
+  font-size: 18px;
+  text-decoration: none;
+  cursor: pointer;
+  vertical-align: middle;
+  color: var(--header-color) !important;
+  margin-right: 16px;
+}
+.navbar-socials__with-partner[data-v-2839db71] {
+  padding-left: 8px;
+}
+</style>
+<style type="text/css">.powered-by[data-v-76dc89ea] {
+  font-size: 12px;
+  margin-bottom: -8px;
+}
+.footer-container[data-v-76dc89ea] {
+  width: 100%;
+  position: relative;
+  margin-top: 32px;
+  text-decoration: none !important;
+}
+.footer-wrapper[data-v-76dc89ea] {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 1060px !important;
+  margin: auto;
+}
+.footer-text[data-v-76dc89ea] {
+  font-size: 12px;
+  padding: 8px;
+  border-radius: 4px;
+  text-align: center;
+}
+.footer-batch[data-v-76dc89ea] {
+  text-decoration: none;
+  background: var(--section-bg-color);
+  color: var(--body-color);
+  margin-bottom: 16px;
+  font-size: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 16px;
+  padding-left: 16px;
+  border-radius: 8px;
+}
+.site-canvas--live .footer-wrapper[data-v-76dc89ea] {
+  max-width: 1290px !important;
+  width: 98%;
+}
+</style>
+
+<style type="text/css">.site-canvas-wrapper[data-v-75ee8f9a] {
+  position: relative;
+  z-index: 2;
+  overflow: auto;
+  max-height: 100vh;
+  height: 100%;
+}
+.site-canvas-body-wrapper[data-v-75ee8f9a] {
+  transition: all 275ms;
+}
+.site-canvas-body[data-v-75ee8f9a] {
+  transition: all 275ms;
+  position: relative;
+  width: 100%;
+}
+.site-canvas-sections-container[data-v-75ee8f9a] {
+  width: 100%;
+}
+.site-canvas__domain-picker-banner-wrapper[data-v-75ee8f9a] {
+  background-color: #17242D;
+  position: relative;
+  padding-right: 16px;
+  padding-bottom: 16px;
+  z-index: 2;
+}
+.site-canvas--editing[data-v-75ee8f9a] {
+  max-height: calc(100vh - 104px) !important;
+}
+.site-canvas--editing .site-canvas-body[data-v-75ee8f9a] {
+  z-index: 3;
+}
+.site-canvas-controls[data-v-75ee8f9a] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 8px;
+  transition: all 275ms;
+  z-index: 2;
+}
+
+</style>
 </head>
   <body class="night">
 	          <div class="loader-wrapper">
@@ -50,16 +391,15 @@
 	<div data-v-75ee8f9a class="flex">
 	<div data-v-75ee8f9a class="site-canvas-sections-container">
 	<div data-v-9d2f42ac data-v-75ee8f9a id="navbar" class="navbar navbar-container navbar--live navbar--tablet" style="border-bottom: none;"> 
-	<div data-v-cf4d3e96 data-v-9d2f42ac class="navbar__wrap">
+	<div data-v-cf4d3e96 data-v-8fea1ab4 data-v-9d2f42ac class="navbar__wrap">
 	<div data-v-cf4d3e96 class="navbar__left">
 	<div data-v-cf4d3e96>
 	<div data-v-0c5c97a3 data-v-cf4d3e96 class="navbar-site-logo">
-	<img data-v-0c5c97a3 src="images/ultilogo.jpg" class="navbar__logo navbar__logo--small navbar__logo--circle">
+	<img data-v-0c5c97a3 src="images/ultilogo.jpg" class="navbar__logo navbar__logo--small navbar__logo--circle"> <!----> <!---->
 	</div></div> 
 	<div data-v-ba730246 data-v-cf4d3e96 class="navbar-site-title"><span data-v-ba730246 class="navbar__title custom-font-style--header">
     UltimateITA
-  </span> <i data-v-14a3aa3e data-v-ba730246 class="icon-check twitch-partnered-icon has-tooltip"></i>
-	</div> 
+  </span> <!----> <i data-v-14a3aa3e data-v-ba730246 class="icon-check twitch-partnered-icon has-tooltip"></i></div> 
   <div data-v-2839db71 data-v-cf4d3e96 class="navbar-socials navbar-socials__with-partner navbar-socials--margin-left">
   <a data-v-2839db71 href="https://YouTube.com/c/ultimateita?sub_confirmation=1" target="_blank" rel="noreferrer noopener" class="navbar-socials__icon fab fa-youtube has-tooltip" aria-hidden="true"></a>
   <a data-v-2839db71 href="https://www.twitch.tv/ultimateita" target="_blank" rel="noreferrer noopener" class="navbar-socials__icon fab fa-twitch has-tooltip" aria-hidden="true"></a>
@@ -74,15 +414,12 @@
 <div data-v-4fdf0cba class="site-section-content">
 <div data-v-2d8063f8 data-v-4fdf0cba class="site-section-child-container" style="flex: 100 1 0%; height: 820px;">
 <div data-v-79b6fa0e data-v-2d8063f8 id="bbb491a4-4bc1-40b8-8318-82079d600673" class="site-section-dropzone-wrapper">
-<div data-v-0cca636e data-v-79b6fa0e id="live-stream" class="site-component">
+<div data-v-0cca636e data-v-79b6fa0e id="live-stream" class="site-component"><!----> 
 <div data-v-fb7c3f86 data-v-0cca636e class="live-stream__root component-container component-live-stream" settings-prop="[object Object]" id="e107e9ee-10e6-4616-84d0-3fb6a2caad3d" style="background-size: cover; background-position: center center; background-color: rgb(46, 52, 75);">
-<div data-v-fb7c3f86 class="live-stream__video-container live-stream__video-container--full" style="border-radius: 5px; background-color: rgba(0, 0, 0, 0.3);">
-<div data-v-fb7c3f86 id="live-stream__video" class="live-stream__video">
+<div data-v-fb7c3f86 class="live-stream__video-container live-stream__video-container--full" style="border-radius: 5px; background-color: rgba(0, 0, 0, 0.3);"><!----> 
+<div data-v-fb7c3f86 id="live-stream__video" class="live-stream__video"><!----> 
 <div data-v-fb7c3f86 id="live-stream-twitch" class="live-stream-twitch">
-<iframe src="https://player.twitch.tv/?channel=UltimateITA&parent=ultimateita.it" allowfullscreen scrolling="no" frameborder="0" allow="fullscreen" title="Twitch" sandbox="allow-modals allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox" width="100%" height="100%"></iframe>
-</div>
-</div>
-</div>
+<iframe src="https://player.twitch.tv/?channel=UltimateITA&parent=ultimateita.it" allowfullscreen scrolling="no" frameborder="0" allow="fullscreen" title="Twitch" sandbox="allow-modals allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox" width="100%" height="100%"></iframe></div></div></div> <!----> 
 <div data-v-fb7c3f86>
 </div>
 </div>
@@ -94,45 +431,49 @@
 </div>
 </div>
 <div data-v-75ee8f9a>
-<div data-v-4fdf0cba data-v-75ee8f9a id="70b4ac8b-c986-4133-8aff-4741ab7b564b" class="site-section site-section--live" style="background-image: url(&quot;&quot;); background-size: cover; background-position: center center;">
+<div data-v-4fdf0cba data-v-75ee8f9a id="70b4ac8b-c986-4133-8aff-4741ab7b564b" class="site-section site-section--live" style="background-image: url(&quot;&quot;); background-size: cover; background-position: center center;"><!----> 
 <div data-v-4fdf0cba class="site-section-content flex">
 <div data-v-2d8063f8 data-v-4fdf0cba class="site-section-child-container" style="flex: 25 1 0%; height: 110px;">
 <div data-v-79b6fa0e data-v-2d8063f8 id="5016f37b-a8e7-4922-b100-790b72b561ac" class="site-section-dropzone-wrapper">
-<div data-v-0cca636e data-v-79b6fa0e id="twitch-panel" class="site-component"> 
-<div data-v-0cca636e class="t-panel component-container component-t-panel" settings-prop="[object Object]" id="df32a161-8ecd-4abe-bd4e-c0a2d2ee968d"> <a href="https://youtube.com/c/ultimateita?sub_confirmation=1" target="_blank" rel="noreferrer noopener"><img src="images/UltyYTbanner.png" alt class="t-panel__image"></a> 
+<div data-v-0cca636e data-v-79b6fa0e id="twitch-panel" class="site-component"><!----> 
+<div data-v-0cca636e class="t-panel component-container component-t-panel" settings-prop="[object Object]" id="df32a161-8ecd-4abe-bd4e-c0a2d2ee968d"><!----> <a href="https://youtube.com/c/ultimateita?sub_confirmation=1" target="_blank" rel="noreferrer noopener"><img src="images/UltyYTbanner.png" alt class="t-panel__image"></a> 
 </div></div></div></div>
 <div data-v-2d8063f8 data-v-4fdf0cba class="site-section-child-container" style="flex: 25 1 0%; height: 110px;">
 <div data-v-79b6fa0e data-v-2d8063f8 id="00c69cbb-67ed-4df7-885f-ab9c141a33c6" class="site-section-dropzone-wrapper">
-<div data-v-0cca636e data-v-79b6fa0e id="twitch-panel" class="site-component">
-<div data-v-0cca636e class="t-panel component-container component-t-panel" settings-prop="[object Object]" id="df32a161-8ecd-4abe-bd4e-c0a2d2ee968d"> <a href="https://discord.gg/ultimateita" target="_blank" rel="noreferrer noopener"><img src="images/UltyDCbanner.png" alt class="t-panel__image"></a> 
+<div data-v-0cca636e data-v-79b6fa0e id="twitch-panel" class="site-component"><!---->
+<div data-v-0cca636e class="t-panel component-container component-t-panel" settings-prop="[object Object]" id="df32a161-8ecd-4abe-bd4e-c0a2d2ee968d"><!----> <a href="https://discord.gg/ultimateita" target="_blank" rel="noreferrer noopener"><img src="images/UltyDCbanner.png" alt class="t-panel__image"></a> 
 </div></div></div></div>
 <div data-v-2d8063f8 data-v-4fdf0cba class="site-section-child-container" style="flex: 25 1 0%; height: 110px;">
 <div data-v-79b6fa0e data-v-2d8063f8 id="fd5130cb-2a40-47d9-9cfc-fa77d02ec57d" class="site-section-dropzone-wrapper">
-<div data-v-0cca636e data-v-79b6fa0e id="twitch-panel" class="site-component">
-<div data-v-0cca636e class="t-panel component-container component-t-panel" settings-prop="[object Object]" id="df32a161-8ecd-4abe-bd4e-c0a2d2ee968d"> <a href="https://instagram.com/ultimate.ita" target="_blank" rel="noreferrer noopener"><img src="images/UltyIGbanner.png" alt class="t-panel__image"></a> 
+<div data-v-0cca636e data-v-79b6fa0e id="twitch-panel" class="site-component"><!----> 
+<div data-v-0cca636e class="t-panel component-container component-t-panel" settings-prop="[object Object]" id="df32a161-8ecd-4abe-bd4e-c0a2d2ee968d"><!----> <a href="https://instagram.com/ultimate.ita" target="_blank" rel="noreferrer noopener"><img src="images/UltyIGbanner.png" alt class="t-panel__image"></a> 
 </div></div></div></div>
 <div data-v-2d8063f8 data-v-4fdf0cba class="site-section-child-container" style="flex: 25 1 0%; height: 110px;">
 <div data-v-79b6fa0e data-v-2d8063f8 id="25be637c-65c4-407d-8842-10e9ceb9d3e6" class="site-section-dropzone-wrapper">
-<div data-v-0cca636e data-v-79b6fa0e id="twitch-panel" class="site-component">
-<div data-v-0cca636e class="t-panel component-container component-t-panel" settings-prop="[object Object]" id="df32a161-8ecd-4abe-bd4e-c0a2d2ee968d"> <a href="https://tiktok.com/@ultimate.ita" target="_blank" rel="noreferrer noopener"><img src="images/UltyTTbanner.png" alt class="t-panel__image"></a> 
+<div data-v-0cca636e data-v-79b6fa0e id="twitch-panel" class="site-component"><!----> 
+<div data-v-0cca636e class="t-panel component-container component-t-panel" settings-prop="[object Object]" id="df32a161-8ecd-4abe-bd4e-c0a2d2ee968d"><!----> <a href="https://tiktok.com/@ultimate.ita" target="_blank" rel="noreferrer noopener"><img src="images/UltyTTbanner.png" alt class="t-panel__image"></a> 
 </div></div></div></div>
 <div data-v-2d8063f8 data-v-4fdf0cba class="site-section-child-container" style="flex: 25 1 0%; height: 110px;">
 <div data-v-79b6fa0e data-v-2d8063f8 id="25be637c-65c4-407d-8842-10e9ceb9d3e6" class="site-section-dropzone-wrapper">
-<div data-v-0cca636e data-v-79b6fa0e id="twitch-panel" class="site-component">
-<div data-v-0cca636e class="t-panel component-container component-t-panel" settings-prop="[object Object]" id="df32a161-8ecd-4abe-bd4e-c0a2d2ee968d"> <a href="/resource.html" target="_blank" rel="noreferrer noopener"><img src="images/UltyRPbanner.png" alt class="t-panel__image"></a> 
-</div></div></div></div></div></div></div>
+<div data-v-0cca636e data-v-79b6fa0e id="twitch-panel" class="site-component"><!----> 
+<div data-v-0cca636e class="t-panel component-container component-t-panel" settings-prop="[object Object]" id="df32a161-8ecd-4abe-bd4e-c0a2d2ee968d"><!----> <a href="/resource.html" target="_blank" rel="noreferrer noopener"><img src="images/UltyRPbanner.png" alt class="t-panel__image"></a> 
+</div></div></div></div></div></div> <!----></div>
 <div data-v-75ee8f9a>
- </div></div></div></div> 
+ <!----></div></div></div></div> 
 <div data-v-76dc89ea data-v-75ee8f9a data-cy="footer" class="footer-container">
 <div data-v-76dc89ea class="footer-wrapper">
 <div data-v-76dc89ea class="flex flex-v-center">
 <div data-v-76dc89ea>
 <div data-v-76dc89ea class="footer-text">
 <img data-v-0c5c97a3 src="images/savage.gif" class="navbar__logo navbar__logo--large navbar__logo--circle">
-    </div></div></div></div></div></div></div></div></div></div>
+<!--<video src="images/audio.mp3" autoplay="true" controls="" style="height: 20px; width: 30%;"></video>--> <!----> <!---->
+    </div></div></div></div></div></div></div> <!----> <!----> <!----> <!----> <!----> <!----> <!----></div></div> <!----> <!----></div>
     <script src="js/manifest.js"></script>
     <script src="js/site.js"></script><style></style>
         <script src="js/aos.js"></script>
+
+<!-- fonts -->
+<link href="css/style.css" rel="stylesheet">
 
 <script src="js/webfont.js"></script>
 
@@ -176,6 +517,7 @@
 
         <!-- Fancybox -->
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+
         <!-- Counter Up -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
         <script src="js/jquery.counterup.min.js"></script>
