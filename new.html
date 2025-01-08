@@ -13,7 +13,6 @@
             --embed-bg-dark: #000000;
             --embed-bg-light: #ffffff;
         }
-
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -28,7 +27,6 @@
             min-height: 100vh;
             overflow-x: hidden;
         }
-
         header {
             width: 100%;
             display: flex;
@@ -36,24 +34,20 @@
             justify-content: space-between;
             padding: 10px 20px;
         }
-
         header .logo {
             display: flex;
             align-items: center;
             gap: 10px;
         }
-
         header .logo img {
             width: 50px;
             height: 50px;
             border-radius: 50%;
         }
-
         header h1 {
             font-size: 1.5rem;
             margin: 0;
         }
-
         header .theme-toggle {
             padding: 5px 15px;
             border: none;
@@ -64,11 +58,9 @@
             color: white;
             transition: background-color 0.3s;
         }
-
         header .theme-toggle:hover {
             background-color: #0056b3;
         }
-
         .embed-container {
             width: 90%;
             max-width: 800px;
@@ -80,75 +72,45 @@
             overflow: hidden;
             transition: background-color 0.3s;
         }
-
         .button-container {
             display: flex;
             justify-content: center;
-            flex-wrap: nowrap;
+            flex-wrap: wrap;
             gap: 10px;
             margin-bottom: 20px;
-            overflow-x: auto;
         }
-
         .button-container button {
-            flex: 1 0 auto;
-            min-width: 120px;
-            max-width: 200px;
-            height: auto;
-            aspect-ratio: 4 / 1;
+            width: 120px;
+            height: 50px;
             border: none;
             cursor: pointer;
             border-radius: 5px;
-            background-size: contain;
-            background-position: center;
-            background-repeat: no-repeat;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background-color: transparent;
             transition: transform 0.3s;
         }
-
+        .button-container button img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
         .button-container button:hover {
-            transform: scale(1.05);
+            transform: scale(1.1);
         }
-
-        .button-container button[data-platform="twitch"] {
-            background-image: url('https://ultimateita.it/assets/img/twitch.png');
-        }
-
-        .button-container button[data-platform="youtube"] {
-            background-image: url('https://ultimateita.it/assets/img/youtube.png');
-        }
-
-        .button-container button[data-platform="discord"] {
-            background-image: url('https://ultimateita.it/assets/img/discord.png');
-        }
-
-        .button-container button[data-platform="instagram"] {
-            background-image: url('https://ultimateita.it/assets/img/instagram.png');
-        }
-
-        .button-container button[data-platform="tiktok"] {
-            background-image: url('https://ultimateita.it/assets/img/tiktok.png');
-        }
-
-        .button-container button[data-platform="minecraft"] {
-            background-image: url('https://ultimateita.it/assets/img/minecraft.png');
-        }
-
         @media (max-width: 768px) {
             .embed-container {
                 height: 300px;
             }
-
             header {
                 flex-direction: column;
                 align-items: flex-start;
             }
-
             header .theme-toggle {
                 margin-top: 10px;
-            }
-
-            .button-container {
-                gap: 5px;
             }
         }
     </style>
@@ -162,7 +124,7 @@
         <button class="theme-toggle" id="themeToggle">Light Mode</button>
     </header>
     <div class="embed-container" id="embed">
-        <iframe id="default-embed" src="https://player.twitch.tv/?channel=ultimateita&parent=ultimateita.it" 
+        <iframe id="default-embed" src="https://player.twitch.tv/?channel=your_channel&parent=ultimateita.it" 
             frameborder="0" 
             allowfullscreen 
             scrolling="no" 
@@ -170,17 +132,44 @@
             width="100%"></iframe>
     </div>
     <div class="button-container">
-        <button data-platform="twitch" onclick="loadEmbed('twitch')"></button>
-        <button data-platform="youtube" onclick="loadEmbed('youtube')"></button>
-        <button data-platform="discord" onclick="loadEmbed('discord')"></button>
-        <button data-platform="instagram" onclick="loadEmbed('instagram')"></button>
-        <button data-platform="tiktok" onclick="loadEmbed('tiktok')"></button>
-        <button data-platform="minecraft" onclick="loadEmbed('minecraft')"></button>
+        <button data-platform="twitch" onclick="loadEmbed('twitch')">
+            <img src="https://ultimateita.it/assets/img/twitch.png" alt="Twitch">
+        </button>
+        <button data-platform="youtube" onclick="loadEmbed('youtube')">
+            <img src="https://ultimateita.it/assets/img/youtube.png" alt="YouTube">
+        </button>
+        <button data-platform="discord" onclick="loadEmbed('discord')">
+            <img src="https://ultimateita.it/assets/img/discord.png" alt="Discord">
+        </button>
+        <button data-platform="instagram" onclick="loadEmbed('instagram')">
+            <img src="https://ultimateita.it/assets/img/instagram.png" alt="Instagram">
+        </button>
+        <button data-platform="tiktok" onclick="loadEmbed('tiktok')">
+            <img src="https://ultimateita.it/assets/img/tiktok.png" alt="TikTok">
+        </button>
+        <button data-platform="minecraft" onclick="loadEmbed('minecraft')">
+            <img src="https://ultimateita.it/assets/img/minecraft.png" alt="Minecraft">
+        </button>
     </div>
     <script>
         const embedContainer = document.getElementById('embed');
         const themeToggle = document.getElementById('themeToggle');
         let currentTheme = 'dark';
+
+        async function fetchVideoId() {
+            try {
+                const response = await fetch('https://live.ultimateita.it/videoid.txt');
+                if (response.ok) {
+                    return await response.text();
+                } else {
+                    console.error('Errore durante il recupero del video ID:', response.status);
+                    return 'your_video_id';
+                }
+            } catch (error) {
+                console.error('Errore di rete:', error);
+                return 'your_video_id';
+            }
+        }
 
         function toggleTheme() {
             if (currentTheme === 'dark') {
@@ -196,11 +185,14 @@
                 currentTheme = 'dark';
                 themeToggle.textContent = 'Light Mode';
             }
+
+            const discordEmbed = document.querySelector('iframe[src*="discord.com/widget"]');
+            if (discordEmbed) {
+                loadEmbed('discord');
+            }
         }
 
-        themeToggle.addEventListener('click', toggleTheme);
-
-        function loadEmbed(platform) {
+        async function loadEmbed(platform) {
             embedContainer.innerHTML = '';
             switch (platform) {
                 case 'twitch':
@@ -208,7 +200,8 @@
                         frameborder="0" allowfullscreen scrolling="no" height="100%" width="100%"></iframe>`;
                     break;
                 case 'youtube':
-                    embedContainer.innerHTML = `<iframe src="https://www.youtube.com/live_chat?v=your_video_id&embed_domain=ultimateita.it" 
+                    const videoId = await fetchVideoId();
+                    embedContainer.innerHTML = `<iframe src="https://www.youtube.com/live_chat?v=${videoId.trim()}&embed_domain=ultimateita.it" 
                         frameborder="0" allowfullscreen scrolling="no" height="100%" width="100%"></iframe>`;
                     break;
                 case 'discord':
@@ -235,6 +228,8 @@
                     console.error("Piattaforma non supportata:", platform);
             }
         }
+
+        themeToggle.addEventListener('click', toggleTheme);
     </script>
 </body>
 </html>
