@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UltimateITA</title>
+    <style>
+        :root {
+            --dark-bg: #121212;
+            --dark-color: #ffffff;
+            --light-bg: #f0f0f0;
+            --light-color: #000000;
+            --embed-bg-dark: #000000;
+            --embed-bg-light: #ffffff;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            background-color: var(--dark-bg);
+            color: var(--dark-color);
+            transition: background-color 0.3s, color 0.3s;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        header {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        header .logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        header .theme-toggle {
+            padding: 5px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+        header .theme-toggle:hover {
+            background-color: #0056b3;
+        }
+
+        .embed-container {
+            width: 90%;
+            max-width: 800px;
+            height: 450px;
+            margin: 10px 0 20px 0;
+            background-color: var(--embed-bg-dark);
+            border: 1px solid #444;
+            position: relative;
+            overflow: hidden;
+            transition: background-color 0.3s;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .button-container button {
+            width: 320px;
+            height: 80px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: transform 0.3s;
+        }
+
+        .button-container button:hover {
+            transform: scale(1.05);
+        }
+
+        .button-container button[data-platform="twitch"] {
+            background-image: url('https://ultimateita.it/assets/img/twitch.png');
+        }
+
+        .button-container button[data-platform="youtube"] {
+            background-image: url('https://ultimateita.it/assets/img/youtube.png');
+        }
+
+        .button-container button[data-platform="discord"] {
+            background-image: url('https://ultimateita.it/assets/img/discord.png');
+        }
+
+        .button-container button[data-platform="instagram"] {
+            background-image: url('https://ultimateita.it/assets/img/instagram.png');
+        }
+
+        .button-container button[data-platform="tiktok"] {
+            background-image: url('https://ultimateita.it/assets/img/tiktok.png');
+        }
+
+        .button-container button[data-platform="minecraft"] {
+            background-image: url('https://ultimateita.it/assets/img/minecraft.png');
+        }
+
+        @media (max-width: 768px) {
+            .embed-container {
+                height: 300px;
+            }
+
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            header .theme-toggle {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://ultimateita.it/assets/img/hero/pfp.png" alt="Logo">
+            <h1>UltimateITA</h1>
+        </div>
+        <button class="theme-toggle" id="themeToggle">Light Mode</button>
+    </header>
+    <div class="embed-container" id="embed">
+        <iframe id="default-embed" src="https://player.twitch.tv/?channel=ultimateita&parent=ultimateita.it" 
+            frameborder="0" 
+            allowfullscreen 
+            scrolling="no" 
+            height="100%" 
+            width="100%"></iframe>
+    </div>
+    <div class="button-container">
+        <button data-platform="twitch" onclick="loadEmbed('twitch')"></button>
+        <button data-platform="youtube" onclick="loadEmbed('youtube')"></button>
+        <button data-platform="discord" onclick="loadEmbed('discord')"></button>
+        <button data-platform="instagram" onclick="loadEmbed('instagram')"></button>
+        <button data-platform="tiktok" onclick="loadEmbed('tiktok')"></button>
+        <button data-platform="minecraft" onclick="loadEmbed('minecraft')"></button>
+    </div>
+    <script>
+        const embedContainer = document.getElementById('embed');
+        const themeToggle = document.getElementById('themeToggle');
+        let currentTheme = 'dark';
+
+        function toggleTheme() {
+            if (currentTheme === 'dark') {
+                document.body.style.backgroundColor = 'var(--light-bg)';
+                document.body.style.color = 'var(--light-color)';
+                embedContainer.style.backgroundColor = 'var(--embed-bg-light)';
+                currentTheme = 'light';
+                themeToggle.textContent = 'Dark Mode';
+            } else {
+                document.body.style.backgroundColor = 'var(--dark-bg)';
+                document.body.style.color = 'var(--dark-color)';
+                embedContainer.style.backgroundColor = 'var(--embed-bg-dark)';
+                currentTheme = 'dark';
+                themeToggle.textContent = 'Light Mode';
+            }
+        }
+
+        themeToggle.addEventListener('click', toggleTheme);
+
+        function loadEmbed(platform) {
+            embedContainer.innerHTML = '';
+            switch (platform) {
+                case 'twitch':
+                    embedContainer.innerHTML = `<iframe src="https://player.twitch.tv/?channel=ultimateita&parent=ultimateita.it" 
+                        frameborder="0" allowfullscreen scrolling="no" height="100%" width="100%"></iframe>`;
+                    break;
+                case 'youtube':
+                    embedContainer.innerHTML = `<iframe src="https://www.youtube.com/live_chat?v=your_video_id&embed_domain=ultimateita.it" 
+                        frameborder="0" allowfullscreen scrolling="no" height="100%" width="100%"></iframe>`;
+                    break;
+                case 'discord':
+                    embedContainer.innerHTML = `<iframe src="https://discord.com/widget?id=your_server_id&theme=${currentTheme}" 
+                        frameborder="0" scrolling="no" height="100%" width="100%"></iframe>`;
+                    break;
+                case 'instagram':
+                    embedContainer.innerHTML = `<iframe src="https://www.instagram.com/ultimate.ita/embed" 
+                        frameborder="0" scrolling="no" height="100%" width="100%"></iframe>`;
+                    break;
+                case 'tiktok':
+                    embedContainer.innerHTML = `<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@ultimate.ita" 
+                        data-unique-id="ultimate.ita" data-embed-from="oembed" data-embed-type="creator">
+                        <section><a target="_blank" href="https://www.tiktok.com/@ultimate.ita">TikTok</a></section></blockquote>`;
+                    const script = document.createElement('script');
+                    script.src = "https://www.tiktok.com/embed.js";
+                    document.body.appendChild(script);
+                    break;
+                case 'minecraft':
+                    embedContainer.innerHTML = `<iframe src="https://your_minecraft_resourcepacks_page.com" 
+                        frameborder="0" allowfullscreen scrolling="no" height="100%" width="100%"></iframe>`;
+                    break;
+                default:
+                    console.error("Piattaforma non supportata:", platform);
+            }
+        }
+    </script>
+</body>
+</html>
