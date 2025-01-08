@@ -84,14 +84,18 @@
         .button-container {
             display: flex;
             justify-content: center;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
             gap: 10px;
             margin-bottom: 20px;
+            overflow-x: auto;
         }
 
         .button-container button {
-            width: 320px;
-            height: 80px;
+            flex: 1 0 auto;
+            min-width: 120px;
+            max-width: 200px;
+            height: auto;
+            aspect-ratio: 4 / 1;
             border: none;
             cursor: pointer;
             border-radius: 5px;
@@ -141,6 +145,10 @@
 
             header .theme-toggle {
                 margin-top: 10px;
+            }
+
+            .button-container {
+                gap: 5px;
             }
         }
     </style>
