@@ -49,17 +49,15 @@
             margin: 0;
         }
         header .theme-toggle {
-            padding: 5px 15px;
+            padding: 5px;
             border: none;
-            border-radius: 5px;
             cursor: pointer;
-            font-size: 14px;
-            background-color: #007bff;
-            color: white;
+            background-color: transparent;
+            font-size: 20px;
             transition: background-color 0.3s;
         }
         header .theme-toggle:hover {
-            background-color: #0056b3;
+            background-color: rgba(0, 0, 0, 0.1);
         }
         .embed-container {
             width: 90%;
@@ -79,10 +77,24 @@
             gap: 10px;
             margin-bottom: 20px;
         }
+        .button-container button {
+            width: 150px;
+            height: 50px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        .button-container button:hover {
+            background-color: #0056b3;
+        }
         .social-container {
             display: flex;
             justify-content: center;
-            gap: 15px;
+            gap: 20px;
             margin-top: 20px;
         }
         .social-container a {
@@ -135,6 +147,10 @@
                 margin-top: 20px;
                 gap: 5px;
             }
+            .social-container {
+                flex-wrap: wrap;
+                gap: 15px;
+            }
         }
     </style>
 </head>
@@ -144,7 +160,9 @@
             <img src="https://ultimateita.it/assets/img/hero/pfp.png" alt="Logo">
             <h1>UltimateITA</h1>
         </div>
-        <button class="theme-toggle" id="themeToggle">Light Mode</button>
+        <button class="theme-toggle" id="themeToggle">
+            🌙
+        </button>
     </header>
     
     <div class="embed-container" id="embed">
@@ -179,6 +197,9 @@
         <a href="https://www.instagram.com/ultimate.ita" target="_blank" aria-label="Visita il nostro profilo Instagram">
             <img src="https://ultimateita.it/assets/img/instagram.png" alt="Instagram">
         </a>
+        <a href="https://www.tiktok.com/@ultimate.ita" target="_blank" aria-label="Visita il nostro profilo TikTok">
+            <img src="https://ultimateita.it/assets/img/tiktok.png" alt="TikTok">
+        </a>
     </div>
 
     <script>
@@ -192,13 +213,13 @@
                 document.body.style.color = 'var(--light-color)';
                 embedContainer.style.backgroundColor = 'var(--embed-bg-light)';
                 currentTheme = 'light';
-                themeToggle.textContent = 'Dark Mode';
+                themeToggle.textContent = '🌙';  // Cambia l'icona per la modalità chiara
             } else {
                 document.body.style.backgroundColor = 'var(--dark-bg)';
                 document.body.style.color = 'var(--dark-color)';
                 embedContainer.style.backgroundColor = 'var(--embed-bg-dark)';
                 currentTheme = 'dark';
-                themeToggle.textContent = 'Light Mode';
+                themeToggle.textContent = '🌞';  // Cambia l'icona per la modalità scura
             }
         }
 
@@ -230,12 +251,12 @@
                         frameborder="0" allowfullscreen scrolling="no" height="100%" width="100%"></iframe>`;
                     break;
                 case 'twitchChat':
-                    embedContainer.innerHTML = `<iframe src="https://www.twitch.tv/embed/ultimateita/chat?parent=ultimateita.it" 
+                    embedContainer.innerHTML = `<iframe src="https://www.twitch.tv/embed/ultimateita/chat" 
                         frameborder="0" allowfullscreen scrolling="no" height="100%" width="100%"></iframe>`;
                     break;
                 case 'youtubeLive':
                     const videoId = await fetchVideoId();
-                    embedContainer.innerHTML = `<iframe src="https://www.youtube.com/live_chat?v=${videoId}&embed_domain=ultimateita.it" 
+                    embedContainer.innerHTML = `<iframe src="https://www.youtube.com/embed/${videoId}?autoplay=1" 
                         frameborder="0" allowfullscreen scrolling="no" height="100%" width="100%"></iframe>`;
                     break;
                 case 'youtubeChat':
