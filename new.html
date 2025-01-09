@@ -67,11 +67,18 @@
             transition: background-color 0.3s;
         }
 
+        .embed-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
         .embed-container {
-            width: 90%;
+            width: 80%;
             max-width: 1200px;
             height: 450px;
-            margin: 10px 0 20px 0;
             background-color: var(--embed-bg-dark);
             border: 1px solid #444;
             overflow: hidden;
@@ -80,10 +87,8 @@
 
         .button-container {
             display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
+            flex-direction: column;
             gap: 10px;
-            margin-bottom: 20px;
         }
 
         .button-container button {
@@ -109,15 +114,9 @@
             margin-top: 20px;
         }
 
-        .social-container a {
+        .social-container img {
             width: 40px;
             height: 40px;
-        }
-
-        .social-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
         }
 
         /* Media Queries */
@@ -128,6 +127,12 @@
 
             header h1 {
                 font-size: 1.3rem;
+            }
+
+            .button-container button {
+                width: 130px;
+                height: 45px;
+                font-size: 12px;
             }
         }
 
@@ -146,18 +151,6 @@
             }
 
             .button-container button {
-                width: 130px;
-                height: 45px;
-                font-size: 12px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .embed-container {
-                height: 300px;
-            }
-
-            .button-container button {
                 width: 100px;
                 height: 40px;
                 font-size: 12px;
@@ -165,16 +158,13 @@
         }
 
         @media (max-width: 576px) {
-            header {
+            .embed-wrapper {
                 flex-direction: column;
                 align-items: center;
             }
 
-            header h1 {
-                font-size: 1.1rem;
-            }
-
             .embed-container {
+                width: 90%;
                 height: 250px;
             }
 
@@ -184,11 +174,7 @@
                 font-size: 10px;
             }
 
-            .social-container {
-                gap: 15px;
-            }
-
-            .social-container a {
+            .social-container img {
                 width: 30px;
                 height: 30px;
             }
@@ -215,26 +201,26 @@
         <button class="theme-toggle" id="themeToggle">🌙</button>
     </header>
 
-    <div class="embed-container" id="embed">
-        <iframe id="default-embed" src="https://player.twitch.tv/?channel=ultimateita&parent=ultimateita.it" 
-            frameborder="0" allowfullscreen scrolling="no" height="100%" width="100%"></iframe>
-    </div>
-
-    <div class="button-container">
-        <button onclick="loadEmbed('twitchLive')">Twitch Live</button>
-        <button onclick="loadEmbed('twitchChat')">Twitch Chat</button>
-        <button onclick="loadEmbed('youtubeLive')">YouTube Live</button>
-        <button onclick="loadEmbed('youtubeChat')">YouTube Chat</button>
-        <button onclick="loadEmbed('tiktokProfile')">Profilo TikTok</button>
+    <div class="embed-wrapper">
+        <div class="button-container">
+            <button onclick="loadEmbed('twitchLive')">Twitch Live</button>
+            <button onclick="loadEmbed('twitchChat')">Twitch Chat</button>
+        </div>
+        <div class="embed-container" id="embed">
+            <iframe id="default-embed" src="https://player.twitch.tv/?channel=ultimateita&parent=ultimateita.it" 
+                frameborder="0" allowfullscreen scrolling="no" height="100%" width="100%"></iframe>
+        </div>
+        <div class="button-container">
+            <button onclick="loadEmbed('youtubeLive')">YouTube Live</button>
+            <button onclick="loadEmbed('tiktokProfile')">TikTok</button>
+        </div>
     </div>
 
     <div class="social-container">
-        <a href="https://www.twitch.tv/ultimateita" target="_blank" aria-label="Visita il nostro canale Twitch">
-            <img src="https://ultimateita.it/assets/img/twitch.png" alt="Twitch">
-        </a>
-        <a href="https://www.youtube.com/channel/ultimateita" target="_blank" aria-label="Visita il nostro canale YouTube">
-            <img src="https://ultimateita.it/assets/img/youtube.png" alt="YouTube">
-        </a>
+        <img src="https://ultimateita.it/assets/img/twitch.png" alt="Twitch">
+        <img src="https://ultimateita.it/assets/img/youtube.png" alt="YouTube">
+        <img src="https://ultimateita.it/assets/img/discord.png" alt="Discord">
+        <img src="https://ultimateita.it/assets/img/instagram.png" alt="Instagram">
     </div>
 
     <script>
