@@ -36,13 +36,16 @@ header nav ul li a {
     text-decoration: none;
 }
 
-header .theme-switcher {
-    display: flex;
-    align-items: center;
+header .theme-switcher button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
 }
 
-header .theme-switcher label {
-    margin-left: 10px;
+header .theme-switcher button:hover {
+    transform: scale(1.2);
 }
 
 #contentContainer {
