@@ -1,1 +1,42 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UltimateITA</title>
+    <link rel="stylesheet" href="savage.css">
+</head>
+<body>
 
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>UltimateITA</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="changeContent('twitch')">Twitch Live</a></li>
+                <li><a href="#" onclick="changeContent('youtubeLive')">YouTube Live</a></li>
+                <li><a href="#" onclick="changeContent('youtubeChat')">YouTube Chat</a></li>
+                <li><a href="#" onclick="changeContent('tiktok')">TikTok</a></li>
+                <li><a href="#" onclick="changeContent('instagram')">Instagram</a></li>
+                <li><a href="#" onclick="changeContent('minecraft')">Minecraft</a></li>
+                <li><a href="#" onclick="changeContent('discord')">Discord</a></li>
+            </ul>
+        </nav>
+        <div class="theme-switcher">
+            <input type="checkbox" id="themeSwitch" onchange="toggleTheme()">
+            <label for="themeSwitch">Switch Theme</label>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <div id="contentContainer">
+            <!-- Contenitore dinamico che ospiterà l'embed -->
+        </div>
+    </main>
+
+    <script src="savage.js"></script>
+</body>
+</html>
