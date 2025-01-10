@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UltimateITA</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="savage.css">
 </head>
 <body>
 
@@ -24,8 +24,9 @@
             </ul>
         </nav>
         <div class="theme-switcher">
-            <input type="checkbox" id="themeSwitch" onchange="toggleTheme()">
-            <label for="themeSwitch">Switch Theme</label>
+            <button id="themeSwitch" onclick="toggleTheme()">
+                <span id="themeIcon">🌙</span>
+            </button>
         </div>
     </header>
 
@@ -50,6 +51,6 @@
         </div>
     </main>
 
-    <script src="scripts.js"></script>
+    <script src="savage.js"></script>
 </body>
 </html>
