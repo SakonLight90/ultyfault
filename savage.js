@@ -47,14 +47,15 @@ function loadEmbed(contentType, videoId = '') {
 }
 
 function toggleTheme() {
-    const isDarkMode = document.getElementById('themeSwitch').checked;
-    const body = document.body;
+    const isDarkMode = document.body.classList.contains('dark');
     if (isDarkMode) {
-        body.classList.add('dark');
-        body.classList.remove('light');
+        document.body.classList.remove('dark');
+        document.body.classList.add('light');
+        document.getElementById('themeIcon').textContent = '🌙';
     } else {
-        body.classList.add('light');
-        body.classList.remove('dark');
+        document.body.classList.remove('light');
+        document.body.classList.add('dark');
+        document.getElementById('themeIcon').textContent = '🌞';
     }
 }
 
