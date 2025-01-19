@@ -1,56 +1,57 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UltimateITA</title>
-    <link rel="stylesheet" href="savage.css">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-
+    <!-- Header Section -->
     <header>
-        <div class="logo">
+        <div class="logo-title">
+            <img src="logo.png" alt="UltimateITA Logo" class="logo">
             <h1>UltimateITA</h1>
         </div>
-        <nav class="menu">
-            <ul>
-                <li><a href="#" onclick="changeContent('twitch')">Twitch Live</a></li>
-                <li><a href="#" onclick="changeContent('youtubeLive')">YouTube Live</a></li>
-                <li><a href="#" onclick="changeContent('youtubeChat')">YouTube Chat</a></li>
-                <li><a href="#" onclick="changeContent('tiktok')">TikTok</a></li>
-                <li><a href="#" onclick="changeContent('instagram')">Instagram</a></li>
-                <li><a href="#" onclick="changeContent('minecraft')">Minecraft</a></li>
-                <li><a href="#" onclick="changeContent('discord')">Discord</a></li>
-            </ul>
-        </nav>
-        <div class="theme-switcher">
-            <button id="themeSwitch" onclick="toggleTheme()">
-                <span id="themeIcon">🌙</span>
-            </button>
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="theme-toggle">
+            <button class="theme-button" id="theme-light">☀️</button>
+            <button class="theme-button" id="theme-dark">🌙</button>
         </div>
     </header>
 
-    <main>
-        <div id="contentContainer"></div>
-        <div id="socialButtons">
-            <a href="https://www.twitch.tv/ultimateita" target="_blank">
-                <img src="images/twitch.png" alt="Twitch" class="social-icon">
-            </a>
-            <a href="https://www.youtube.com/ultimateita" target="_blank">
-                <img src="images/youtube.png" alt="YouTube" class="social-icon">
-            </a>
-            <a href="https://www.tiktok.com/@ultimate.ita" target="_blank">
-                <img src="images/tiktok.png" alt="TikTok" class="social-icon">
-            </a>
-            <a href="https://www.instagram.com/ultimate.ita" target="_blank">
-                <img src="images/instagram.png" alt="Instagram" class="social-icon">
-            </a>
-            <a href="https://discord.gg/ultimateita" target="_blank">
-                <img src="images/discord.png" alt="Discord" class="social-icon">
-            </a>
-        </div>
-    </main>
+    <!-- Sidebar Menu -->
+    <nav class="sidebar" id="sidebar">
+        <ul>
+            <li><button class="embed-button" data-embed="twitch-live">Twitch Live</button></li>
+            <li><button class="embed-button" data-embed="twitch-chat">Twitch Chat</button></li>
+            <li><button class="embed-button" data-embed="youtube-live">YouTube Live</button></li>
+            <li><button class="embed-button" data-embed="youtube-chat">YouTube Chat</button></li>
+            <li><button class="embed-button" data-embed="discord">Discord</button></li>
+            <li><button class="embed-button" data-embed="tiktok">TikTok</button></li>
+            <li><button class="embed-button" data-embed="instagram">Instagram</button></li>
+            <li><button class="embed-button" data-embed="special">Minecraft</button></li>
+        </ul>
+    </nav>
 
-    <script src="savage.js"></script>
+    <!-- Main Content -->
+    <main>
+        <section class="embed-container" id="embed-container">
+            <iframe src="https://player.twitch.tv/?channel=UltimateITA&parent=ultimateita.it" frameborder="0" allowfullscreen></iframe>
+        </section>
+
+        <section class="social-links">
+            <a href="https://discord.gg/ultimateita" target="_blank"><img src="discord.png" alt="Discord"></a>
+            <a href="https://youtube.com/c/ultimateita?sub_confirmation=1" target="_blank"><img src="youtube.png" alt="YouTube"></a>
+            <a href="https://tiktok.com/@ultimate.ita" target="_blank"><img src="tiktok.png" alt="TikTok"></a>
+            <a href="https://instagram.com/ultimate.ita" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+            <a href="https://twitch.tv/ultimateita" target="_blank"><img src="twitch.png" alt="Twitch"></a>
+        </section>
+    </main>
 </body>
 </html>
