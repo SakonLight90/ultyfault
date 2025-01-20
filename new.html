@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UltimateITA</title>
-    <link rel="stylesheet" href="savage.css">
-    <script defer src="savage.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
     <!-- Header Section -->
@@ -19,37 +19,118 @@
             <span></span>
             <span></span>
         </div>
+        <nav class="menu">
+            <ul>
+                <li><button class="embed-button" data-embed="twitch-live">Twitch Live</button></li>
+                <li><button class="embed-button" data-embed="twitch-chat">Twitch Chat</button></li>
+                <li><button class="embed-button" data-embed="youtube-live">YouTube Live</button></li>
+                <li><button class="embed-button" data-embed="youtube-chat">YouTube Chat</button></li>
+                <li><button class="embed-button" data-embed="discord">Discord</button></li>
+                <li><button class="embed-button" data-embed="tiktok">TikTok</button></li>
+                <li><button class="embed-button" data-embed="instagram">Instagram</button></li>
+                <li><button class="embed-button" data-embed="special">Special</button></li>
+            </ul>
+        </nav>
         <div class="theme-toggle">
             <button class="theme-button" id="theme-light">☀️</button>
             <button class="theme-button" id="theme-dark">🌙</button>
         </div>
     </header>
 
-    <!-- Sidebar Menu -->
-    <nav class="sidebar" id="sidebar">
-        <ul>
-            <li><button class="embed-button" data-embed="twitch-live">Twitch Live</button></li>
-            <li><button class="embed-button" data-embed="twitch-chat">Twitch Chat</button></li>
-            <li><button class="embed-button" data-embed="youtube-live">YouTube Live</button></li>
-            <li><button class="embed-button" data-embed="youtube-chat">YouTube Chat</button></li>
-            <li><button class="embed-button" data-embed="discord">Discord</button></li>
-            <li><button class="embed-button" data-embed="tiktok">TikTok</button></li>
-            <li><button class="embed-button" data-embed="instagram">Instagram</button></li>
-            <li><button class="embed-button" data-embed="special">Minecraft</button></li>
-        </ul>
-    </nav>
-
     <!-- Main Content -->
     <main>
         <section class="embed-container" id="embed-container">
+            <!-- Default Embed: Twitch Live -->
             <iframe src="https://player.twitch.tv/?channel=UltimateITA&parent=ultimateita.it" frameborder="0" allowfullscreen></iframe>
         </section>
 
+        <!-- Twitch Chat Embed -->
+        <section class="embed-container twitch-chat-container" id="twitch-chat-container" style="display: none;">
+            <iframe src="https://www.twitch.tv/embed/UltimateITA/chat?parent=ultimateita.it" frameborder="0" allowfullscreen></iframe>
+        </section>
+
+        <!-- TikTok Embed -->
+        <section class="embed-container tiktok-container" id="tiktok-container" style="display: none;">
+            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@ultimate.ita" data-unique-id="ultimate.ita" data-embed-from="oembed" data-embed-type="creator" style="max-width:780px; min-width:288px;"> 
+                <section> 
+                    <a target="_blank" href="https://www.tiktok.com/@ultimate.ita?refer=creator_embed">@ultimate.ita</a> 
+                </section> 
+            </blockquote> 
+            <script async src="https://www.tiktok.com/embed.js"></script>
+        </section>
+
+        <!-- Discord Embed -->
+        <section class="embed-container discord-container" id="discord-container" style="display: none;">
+            <iframe id="discord-embed" 
+                src="https://discord.com/widget?id=YOUR_SERVER_ID&theme=dark"
+                frameborder="0" 
+                allowtransparency="true"
+                style="width: 100%; height: 500px;"></iframe>
+        </section>
+
+        <!-- Instagram Embed -->
+        <section class="embed-container instagram-container" id="instagram-container" style="display: none;">
+            <iframe 
+                src="https://www.instagram.com/ultimate.ita/embed" 
+                frameborder="0" 
+                allowtransparency="true" 
+                allowfullscreen="true" 
+                scrolling="no" 
+                style="width: 100%; height: 600px; max-width: 540px; border: none;">
+            </iframe>
+        </section>
+
+        <!-- Special Embed Section -->
+        <section class="embed-container special-container" id="special-container" style="display: none;">
+            <h2>Resource Packs Archive</h2>
+            <p>Scarica i nostri Resource Packs per Minecraft! Trova l'ultima versione o esplora l'archivio delle versioni precedenti.</p>
+
+            <!-- Resource Pack 1 -->
+            <div class="resource-pack">
+                <h3>Resource Pack 1</h3>
+                <p>Descrizione del pacchetto 1.</p>
+                <button class="download-latest">
+                    <a href="downloads/resource_pack_1_latest.zip" download>Scarica Ultima Versione</a>
+                </button>
+                <ul class="version-archive">
+                    <li><a href="downloads/resource_pack_1_v1.0.zip" download>Versione 1.0 - 01/01/2023</a></li>
+                    <li><a href="downloads/resource_pack_1_v0.9.zip" download>Versione 0.9 - 01/12/2022</a></li>
+                </ul>
+            </div>
+
+            <!-- Resource Pack 2 -->
+            <div class="resource-pack">
+                <h3>Resource Pack 2</h3>
+                <p>Descrizione del pacchetto 2.</p>
+                <button class="download-latest">
+                    <a href="downloads/resource_pack_2_latest.zip" download>Scarica Ultima Versione</a>
+                </button>
+                <ul class="version-archive">
+                    <li><a href="downloads/resource_pack_2_v1.2.zip" download>Versione 1.2 - 15/06/2023</a></li>
+                    <li><a href="downloads/resource_pack_2_v1.1.zip" download>Versione 1.1 - 01/06/2023</a></li>
+                </ul>
+            </div>
+
+            <!-- Resource Pack 3 -->
+            <div class="resource-pack">
+                <h3>Resource Pack 3</h3>
+                <p>Descrizione del pacchetto 3.</p>
+                <button class="download-latest">
+                    <a href="downloads/resource_pack_3_latest.zip" download>Scarica Ultima Versione</a>
+                </button>
+                <ul class="version-archive">
+                    <li><a href="downloads/resource_pack_3_v2.0.zip" download>Versione 2.0 - 20/10/2023</a></li>
+                    <li><a href="downloads/resource_pack_3_v1.9.zip" download>Versione 1.9 - 01/10/2023</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Social Links -->
         <section class="social-links">
             <a href="https://discord.gg/ultimateita" target="_blank"><img src="discord.png" alt="Discord"></a>
-            <a href="https://youtube.com/c/ultimateita?sub_confirmation=1" target="_blank"><img src="youtube.png" alt="YouTube"></a>
-            <a href="https://tiktok.com/@ultimate.ita" target="_blank"><img src="tiktok.png" alt="TikTok"></a>
-            <a href="https://instagram.com/ultimate.ita" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+            <a href="https://youtube.com/c/ultimateita?sub_confirmation=1" target="_blank"><img src="youtube.png" alt="Youtube"></a>
+            <a href="https://tiktok.com/@ultimate.ita" target="_blank"><img src="tiktok.png" alt="Tiktok"></a>
+            <a href="https://instagram.com/ultimate.ita" target="_blank"><img src="youtube.png" alt="Instagram"></a>
             <a href="https://twitch.tv/ultimateita" target="_blank"><img src="twitch.png" alt="Twitch"></a>
         </section>
     </main>
